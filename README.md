@@ -1,18 +1,40 @@
-# regresspy
+# Regresspy
+
+Name: Md. Mainul Hasan
+
+ID: 181-35-2339
 
 `regresspy` is a python module for carrying out simple regressions using gradient descent algorithm. However, the library is half complete. Your task is to fill in the necessary codes. The tasks of the project is given below:
+At first I have Fork this repository in the regresspy main file. Then I had had cloned this repository in my desktop from the pycharm terminal. Then I have changed the directory of regresspy. Then create a new branch of this repository Git add . using this command and all the file added in this branch on the other hand I left a comment and finally git push of this branch. Now I have updated the project I took first of all loss.py file and created some function as like mse, sse, mae and rmse and finally run this file from pycharm terminal. Then I go to my gradient descent file and change the forward function and run this function from pycharm terminal. Then I changed the test_loss.py file and make some functions (test_mase, test_rmse, test_sse) here my course teacher already created test_mae function so it easy for me to create another 3 function and finally i check those function from terminal and using same values. Then I go to regression.py file. 1-First of all i set weight and bias in predict function and return prediction.
 
-- Fork this repository.
-- Create a new branch using your username.
-- Fill in the `.gitignore` file by creating one for Python from [.gitignore.io](https://www.toptal.com/developers/gitignore).
-- **Commit frequently, usually everytime after changing or completing a function. Make the commit messages clear and complete.** You may read this [blog](https://chris.beams.io/posts/git-commit/) to learn about writing good commit messages.
-- Write the codes for the mean absolute, sum of squared, mean squared, and root mean squared errors in the `loss.py` file.
-- Complete the `test_loss.py` by filling in the codes to test above functions. An example for testing `mae` is already given. You may read [this](https://realpython.com/pytest-python-testing/) blog or any other to learn about `pytest`.
-- After that, go to the `gradient_descent.py` file. It contains two functions named `forward` for computing forward propagation and `backward` for computing the gradients. The second one is already done for you. All you have to do is fill in the codes for forward propagation.
-- Then go to the `main.py` file where the actual training will take place. The first task is to complete the `_initialize_weights` function. Then complete the `_train` function. Finally, complete the `predict` and `score` function.
-- Now, go the `model.py` file in the `test` folder. Here, you will perform two regressions. First one will be carried out using the `SGDRegressor` from the `sklearn` library. Second one will be carried out using your own codes. Compare the results and write in the `README.md` file (You can delete this README file).
-- Fill in the `requirements.txt` file according to the libraries you have used in your codes.
-- Fill-in the `setup.py` file to install your code as a library. You may read [this](https://godatadriven.com/blog/a-practical-guide-to-using-setup-py/) blog or the Python documentation to learn how to prepare this file.
-- Give an appropriate license to your library in the `LICENSE` file. You may use [choosealicense.com](https://choosealicense.com/) to select the best one according to your case.
-- Try to make your code look beautiful. You can add optional documentation about how to use your library in the `README` file. Look for other repositories and see how they have documented.
-- **Finally, email me the link of your repository.**
+2-Then get score all the (mse, rmse, mae, sse) function using if, else from the score function and return the score.
+
+3-Actually i change self weight and bios but in the initialize_weights function but my course teacher already did it.
+
+4-And finally i i change the train function using forward and backward function from the gradient descent file.
+
+5-Using forward propagation (forward function) i got loss and print it.
+
+Then finally i go to model.py file. 1-At first i changed the reshape in Y predict portion. I got error and again i set the reshape and run successfully.
+
+2-I Used the stochastic gradient descent regressor and set iteration 20.
+
+3-I trained X, Y through fit function from regression file of the stochastic gradient descent.
+
+4-I predict stochastic gradient descent through predict function from regression.py file.
+
+5-I calculated stochastic gradient descent rmse through rmse function from loss.py file.
+
+6-And finally i got stochastic gradient descent rmse value, where the value is 0.5878859664089165
+
+7-I evaluated regression value through regression function from regression.py file and set epoch/iteration 50 and also learning rate was 0.0001.
+
+8-I trained X, Y through fit function from regression file of the regression value.
+
+9-I predict regression value through predict function from regression.py file.
+
+10-I calculated score of regression rmse through score function from regression.py file.
+
+11-And finally i got RMSE value, where the value is 1.5323455704352724
+
+Then i created the requirement.txt file that which the libraries actually needed of this project. And updated the requirement file. And i run this setup.py file on my cmd for the test. Finally add all the files in my branch on github using (git add .), left comment was "All the files "updated" using (git commit - m "") this command and push all files.

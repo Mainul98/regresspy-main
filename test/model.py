@@ -10,16 +10,21 @@ Y = iris.data[:, 1].reshape(-1, 1)
 
 
 
+#TODO Perform a linear regression using sklearn and calculate training rmse.
+# Use the SGDRegressor and only select set learning rate and epochs.
 
-sgd = SGDRegressor(max_iter=100,learning_rate='constant',eta0=0.001)
-sgd.fit(X,Y.reshape(-1))
-sgd_pred=sgd.predict(X)
-sgd_rmse= rmse(sgd_pred,Y.reshape(-1))
-print('SGDRegressor RMSE:',str(sgd_rmse))
+stochastic_gradient_descent = SGDRegressor(max_iter= 100, learning_rate= 'constant', eta0= 0.001)
+stochastic_gradient_descent.fit(X, Y.reshape(-1))
+sto_chas_grad_prediction = stochastic_gradient_descent.predict(X)
+sto_chas_grad_rmse = rmse(sto_chas_grad_prediction, Y)
+print('Stochastic Gradient Descent Regressor RMSE value:', str(sto_chas_grad_rmse))
 
-reg = Regression(epoch=100,learing_rate=0.0001)
-reg.fit(X,Y)
-reg_pred=reg.predict(x)
-reg_rmse=reg.score(reg_pred,Y)
-print('RMSE of our class:',str(reg_rmse))
+# #TODO Perform a linear regression using your code and calculate training rmse.
 
+
+regression_value = Regression(epochs= 20, learning_rate= 0.0001)
+regression_value.fit(X, Y)
+reg_pred = regression_value.predict(X)
+#print(reg_pred.shape)
+regression_rmse = regression_value.score(reg_pred, Y)
+print('RMSE value of class: ', str(regression_rmse))
